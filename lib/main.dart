@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tryflutter/try_bottom_navigation_bar.dart';
+import 'package:tryflutter/try_navigation_rail.dart';
 
 void main() {
   runApp(MyApp());
@@ -42,8 +43,12 @@ class MyHomePage extends StatelessWidget {
 
   List<Widget> _buildMenu(BuildContext context) {
     return <Widget>[
-      RaisedButton(
-        child: Text('try_bottom_navigation_bar'),
+      RaisedButton(child: Text('try_navigation_rail'),
+        onPressed: () {
+          Navigator.push(context, MaterialPageRoute(builder: (context) => TryNavigationRail()));
+        },
+      ),
+      RaisedButton(child: Text('try_bottom_navigation_bar'),
         onPressed: () {
           Navigator.push(context, MaterialPageRoute(builder: (context) => TryBottomNavigationBar()));
         },
