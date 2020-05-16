@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
         // closer together (more dense) than on mobile platforms.
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
+      // 国际化教程：https://www.colabug.com/2020/0408/7226115/amp/
       localizationsDelegates: [
         GlobalMaterialLocalizations.delegate, // 指定本地化的字符串和一些其他的值
         GlobalCupertinoLocalizations.delegate, // 对应的Cupertino风格
