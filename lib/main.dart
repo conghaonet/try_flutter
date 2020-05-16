@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:tryflutter/try_bottom_navigation_bar.dart';
+import 'package:tryflutter/try_calendar_date_picker.dart';
 import 'package:tryflutter/try_navigation_rail.dart';
 
 void main() {
@@ -18,6 +20,15 @@ class MyApp extends StatelessWidget {
         // closer together (more dense) than on mobile platforms.
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
+      localizationsDelegates: [
+        GlobalMaterialLocalizations.delegate, // 指定本地化的字符串和一些其他的值
+        GlobalCupertinoLocalizations.delegate, // 对应的Cupertino风格
+        GlobalWidgetsLocalizations.delegate // 指定默认的文本排列方向, 由左到右或由右到左
+      ],
+      supportedLocales: [
+        Locale("en"),
+        Locale("zh")
+      ],
       home: MyHomePage(),
     );
   }
@@ -51,6 +62,11 @@ class MyHomePage extends StatelessWidget {
       RaisedButton(child: Text('try_bottom_navigation_bar'),
         onPressed: () {
           Navigator.push(context, MaterialPageRoute(builder: (context) => TryBottomNavigationBar()));
+        },
+      ),
+      RaisedButton(child: Text('try_calendar_date_picker'),
+        onPressed: () {
+          Navigator.push(context, MaterialPageRoute(builder: (context) => TryCalendarDatePicker()));
         },
       ),
     ];
