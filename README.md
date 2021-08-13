@@ -1,4 +1,4 @@
-# tryflutter
+# Try Flutter
 
 Try Flutter widgets and animations.
 
